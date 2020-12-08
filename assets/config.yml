@@ -72,6 +72,7 @@ services:
         tag: "app"
         url: "https://remote.exceptionerror.io/"
         target: "_blank"
+
   - name: "Monitoring"
     icon: "fas fa-chart-area"
     items:
@@ -93,3 +94,19 @@ services:
         tag: "Elasticsearch"
         url: "https://kibana.exceptionerror.io/"
         target: "_blank"
+  
+  - name: "Collaboration"
+    icon: "fas fa-user-friends"
+    items:
+      - name: "Meeting"
+        logo: "assets/tools/jisti.jpg"
+        subtitle: "Jisti conferencing "
+        tag: "meeting"
+        url: "https://meet.exceptionerror.io/"
+        target: "_blank" 
+      - name: "Watch2Gether"
+        logo: "assets/tools/watch2gether.png"
+        subtitle: "Watch things together"
+        tag: "app"
+        url: "https://watch2gether.exceptionerror.io/"
+        target: "_blank" 
