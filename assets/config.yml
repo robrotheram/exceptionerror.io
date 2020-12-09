@@ -108,7 +108,7 @@ services:
         logo: "assets/tools/element.jpg"
         subtitle: "Element chat "
         tag: "meeting"
-        url: "https://meet.exceptionerror.io/"
+        url: "https://element.exceptionerror.io/"
         target: "_blank" 
       - name: "Watch2Gether"
         logo: "assets/tools/watch2gether.png"
