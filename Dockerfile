@@ -9,6 +9,7 @@ RUN cd /thttpd \
   && make CCOPT='-O2 -s -static' thttpd
 RUN adduser -D static
 
+
 # Switch to the scratch image
 FROM scratch
 LABEL org.opencontainers.image.source="https://github.com/robrotheram/exceptionerror.io"

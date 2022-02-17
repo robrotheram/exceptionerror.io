@@ -19,8 +19,8 @@ jobs:
         
     - name: Build the Docker image
       run: |
-        docker build . --tag ghcr.io/robrotheram/blog:latest
-        docker push ghcr.io/robrotheram/blog:latest
+        docker build . --tag ghcr.io/robrotheram/portal:latest
+        docker push ghcr.io/robrotheram/portal:latest
 
   deploy:
     needs: [build]
