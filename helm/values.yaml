@@ -3,7 +3,7 @@ image:
   repository: ghcr.io/robrotheram/portal
   pullPolicy: Always
   tag: latest
-  commit: 14b78dc5a21ede7d54c9b1ee6de356e7e3563df3
+  commit: 52984607b682b1b7f6d170f657cf357e42a2c886
 imagePullSecrets: []
 nameOverride: ''
 fullnameOverride: exceptionerror-io
