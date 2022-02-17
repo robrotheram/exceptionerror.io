@@ -24,7 +24,7 @@ ingress:
   tls:
     - hosts:
         - exceptionerror.io
-      secretName: production-blog-tls
+      secretName: production-portal-tls
 resources:
   limits:
     cpu: 100m

@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "blog.exceptionerror.io.fullname" . }}
+  name: {{ include "exceptionerror.io.fullname" . }}
   labels:
-    {{- include "blog.exceptionerror.io.labels" . | nindent 4 }}
+    {{- include "exceptionerror.io.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "blog.exceptionerror.io.selectorLabels" . | nindent 6 }}
+      {{- include "exceptionerror.io.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -16,7 +16,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "blog.exceptionerror.io.selectorLabels" . | nindent 8 }}
+        {{- include "exceptionerror.io.selectorLabels" . | nindent 8 }}
         commitHash: {{ .Values.image.commit }}
         
     spec:

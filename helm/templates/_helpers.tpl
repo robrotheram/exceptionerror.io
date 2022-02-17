@@ -1,7 +1,7 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "blog.exceptionerror.io.name" -}}
+{{- define "exceptionerror.io.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
@@ -10,7 +10,7 @@ Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a full name.
 */}}
-{{- define "blog.exceptionerror.io.fullname" -}}
+{{- define "exceptionerror.io.fullname" -}}
 {{- if .Values.fullnameOverride }}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -26,16 +26,16 @@ If release name contains chart name it will be used as a full name.
 {{/*
 Create chart name and version as used by the chart label.
 */}}
-{{- define "blog.exceptionerror.io.chart" -}}
+{{- define "exceptionerror.io.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{/*
 Common labels
 */}}
-{{- define "blog.exceptionerror.io.labels" -}}
-helm.sh/chart: {{ include "blog.exceptionerror.io.chart" . }}
-{{ include "blog.exceptionerror.io.selectorLabels" . }}
+{{- define "exceptionerror.io.labels" -}}
+helm.sh/chart: {{ include "exceptionerror.io.chart" . }}
+{{ include "exceptionerror.io.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
@@ -45,17 +45,17 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{/*
 Selector labels
 */}}
-{{- define "blog.exceptionerror.io.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "blog.exceptionerror.io.name" . }}
+{{- define "exceptionerror.io.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "exceptionerror.io.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
 Create the name of the service account to use
 */}}
-{{- define "blog.exceptionerror.io.serviceAccountName" -}}
+{{- define "exceptionerror.io.serviceAccountName" -}}
 {{- if .Values.serviceAccount.create }}
-{{- default (include "blog.exceptionerror.io.fullname" .) .Values.serviceAccount.name }}
+{{- default (include "exceptionerror.io.fullname" .) .Values.serviceAccount.name }}
 {{- else }}
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
